@@ -1,0 +1,19 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+
+  title:
+    label: Title
+    placeholder: New post title
+
+  categories:
+    label: Categories
+    type: relation
+    nameFrom: name
+
+  tags:
+    label: Tags
+    type: relation
+    nameFrom: name

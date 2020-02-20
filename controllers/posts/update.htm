@@ -1,0 +1,32 @@
+<?php Block::put('breadcrumb') ?>
+	<ul>
+		<li><?= e(trans($this->pageTitle)) ?></li>
+	</ul>
+<?php Block::endPut() ?>
+
+<?php if (!$this->fatalError): ?>
+	<?= Form::open(['class'=>'layout-item stretch layout-column']) ?>
+
+		<?= $this->formRender() ?>
+
+		<div class="form-buttons layout-item fix">
+			<div class="loading-indicator-container">
+				<button
+					type="submit"
+					data-request="onSave"
+					data-request-data="redirect:0"
+					data-hotkey="ctrl+s, cmd+s"
+					data-load-indicator="Saving Menu..."
+					class="btn btn-primary">
+					<u>S</u>ave
+				</button>
+			</div>
+		</div>
+
+	<?= Form::close() ?>
+
+<?php else: ?>
+
+	<p class="flash-message static error"><?= e(trans($this->fatalError)) ?></p>
+
+<?php endif ?>

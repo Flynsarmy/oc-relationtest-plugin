@@ -1,0 +1,12 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: Relation Test
+form: ~/plugins/flynsarmy/relationtest/models/post/fields.yaml
+modelClass: Flynsarmy\RelationTest\Models\Post
+defaultRedirect: flynsarmy/relationtest/posts/update/1
+
+update:
+    redirect: flynsarmy/relationtest/posts/update/1
+    redirectClose: flynsarmy/relationtest/posts/update/1

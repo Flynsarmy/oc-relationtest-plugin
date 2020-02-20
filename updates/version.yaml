@@ -1,0 +1,4 @@
+1.0.1: 
+    - Initialize plugin
+    - create_tables.php
+    - seed_tables.php
